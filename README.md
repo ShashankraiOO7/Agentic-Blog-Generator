@@ -41,7 +41,7 @@ A FastAPI-powered web application that uses multi-agent collaboration (via [Crew
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/ai-blog-generator.git
+git clone https://github.com/ShashankraiOO7/ai-blog-generator.git
 cd ai-blog-generator
 ```
 
