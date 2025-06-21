@@ -1,0 +1,26 @@
+do_research:
+  agent: researcher
+  description: Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current year is 2025 June.
+  expected_output: "research_points — A bulleted list of concise, relevant, and well-organized factual points and examples that fully cover the input topic."
+
+generate_draft:
+  agent: writer
+  description: "Receive the research_points output from the Researcher, and use these findings to write the first draft of the blog post, making sure every section directly addresses the initial topic specified by the user."
+  expected_output: "blog_draft — A complete blog post draft (in plain text or Markdown), clearly structured and based entirely on the research_points, staying true to the original topic."
+
+verify_facts:
+  agent: fact_checker
+  description: "Accept the blog_draft created by the Writer, fact-check every claim against reliable sources, correct any inaccuracies, and ensure that the post remains faithful to the user's original topic intent."
+  expected_output: "fact_checked_draft — A factually accurate, error-free blog post draft with all information verified, while keeping the writing focused on the original topic."
+
+optimize_seo:
+  agent: seo_expert
+  description: "Take the fact_checked_draft and optimize the entire blog post for SEO. Improve keyword placement, headings, and meta-descriptions so the post ranks for the original topic, but maintain a natural, reader-friendly style."
+  expected_output: "seo_optimized_draft — An SEO-enhanced, human-readable Markdown draft that is highly discoverable for searches related to the initial blog topic and use Keyword which are Famous for the topic."
+
+file_write_task:
+  agent: file_writer
+  description: "Receive the final seo_optimized_draft and save it to Output.md, making sure the resulting Markdown file is ready for publication and can be traced back to the initial topic provided at kickoff."
+  expected_output: "output_file — A polished, publication-ready Markdown file (Output.md) containing the final blog post, clearly derived from the original topic.Formatted as markdown without '```' ."
